@@ -12,7 +12,7 @@ while True:
 
   elementoEstruturante = np.ones((10, 10), np.uint8)
   frameSegmentado = cv2.morphologyEx(frameSegmentado, cv2.MORPH_CLOSE, elementoEstruturante)
-  contornos, hierarquia = cv2.findContours(frameSegmentado, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+  _,contornos, hierarquia = cv2.findContours(frameSegmentado, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
   if len(contornos) >= 1:
     objeto = contornos[0]
